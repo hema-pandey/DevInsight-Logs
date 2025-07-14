@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevInsight Logs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 🧠 Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1>DevInsight Logs</h1>
+      <p class="tagline">Reflect. Refactor. Rise.</p>
+    </nav>
+  </header>
+
+  <!-- 📝 Entry Section -->
+  <section id="entry">
+    <h2>Add Today’s Reflection</h2>
+    <form id="logForm">
+      <textarea id="learning" placeholder="What did you learn today?" rows="3" required></textarea>
+      <textarea id="bugFix" placeholder="Bugs solved or faced?" rows="2"></textarea>
+      <textarea id="resources" placeholder="Resources explored (links, docs)" rows="2"></textarea>
+      <button type="submit">➕ Log Entry</button>
+    </form>
+  </section>
+
+  <!-- 📋 Logs Display Section -->
+  <section id="logDisplay">
+    <h2>Code Reflections</h2>
+    <div id="logContainer" class="grid-container">
+      <!-- Logs will load here -->
+    </div>
+  </section>
+
+  <!-- 📊 Stats Dashboard -->
+  <section id="statsPanel">
+    <h2>📈 Your Reflection Stats</h2>
+    <div class="stats">
+      <p><strong>Total Logs:</strong> <span id="totalLogs">0</span></p>
+      <p><strong>Bug Mentions:</strong> <span id="bugCount">0</span></p>
+      <p><strong>Top Keywords:</strong> <span id="topKeywords">None yet</span></p>
+    </div>
+  </section>
+
+<!-- 🌈 Mood Tracker -->
+<section id="moodPanel">
+  <h2>🧘 How Did Coding Feel Today?</h2>
+  <form id="moodForm">
+    <select id="moodSelect" required>
+      <option value="">Select Mood</option>
+      <option value="Focused">🎯 Focused</option>
+      <option value="Frustrated">😤 Frustrated</option>
+      <option value="Inspired">✨ Inspired</option>
+      <option value="Curious">🧠 Curious</option>
+      <option value="Calm">🌿 Calm</option>
+    </select>
+    <button type="submit">Save Mood</button>
+  </form>
+  <p id="latestMood">No mood logged yet.</p>
+</section>
+
+
+<!-- 🎯 Goal Tracker -->
+<section id="goalTracker">
+  <h2>🚀 Your Coding Goals</h2>
+  <form id="goalForm">
+    <input type="text" id="goalInput" placeholder="Add a new goal..." required />
+    <button type="submit">➕ Add Goal</button>
+  </form>
+  <ul id="goalList"></ul>
+</section>
+
+
+<!-- 🙏 Gratitude Snippet -->
+<section id="gratitudePanel">
+  <h2>🙏 Gratitude for Today</h2>
+  <form id="gratitudeForm">
+    <textarea id="gratitudeInput" placeholder="What are you grateful for in today’s dev journey?" rows="3" required></textarea>
+    <button type="submit">💾 Save Gratitude</button>
+  </form>
+  <p id="gratitudeOutput">No entry yet. 🌱</p>
+</section>
+
+
+<!-- 💡 Dev Prompt Panel -->
+<section id="promptPanel">
+  <h2>💡 Dev Prompt</h2>
+  <p id="dailyPrompt">Loading today's prompt...</p>
+  <button id="refreshPrompt">🔄 New Prompt</button>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
